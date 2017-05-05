@@ -9,10 +9,10 @@
     </script>
 </head>
 
-<body ng-init="timeOfDay = 19">
+<body ng-init="timeOfDay = 8">
     <h1>This is an Angular.js app</h1>
-    <p ng-if="timeOfDay < 12">Good morning</p>
-    <p ng-if="timeOfDay > 17">Good evening</p>
+    <p ng-if="timeOfDay < 12">Good morning: <span ng-bind="timeOfDay"></span></p>
+    <p ng-if="timeOfDay > 17">Good evening: {{timeOfDay}}</p>
 </body>
 
 </html>
