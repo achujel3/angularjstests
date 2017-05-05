@@ -9,9 +9,10 @@
     </script>
 </head>
 
-<body>
+<body ng-init="timeOfDay = 19">
     <h1>This is an Angular.js app</h1>
-    <p ng-if="false">Some paragraph info</p>
+    <p ng-if="timeOfDay < 12">Good morning</p>
+    <p ng-if="timeOfDay > 17">Good evening</p>
 </body>
 
 </html>
