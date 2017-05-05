@@ -19,7 +19,7 @@
         <p ng-hide="c.checked">2. Some text</p>
 
         <div ng-repeat="i in c.myList">
-            <p>Name is {{i.name}} and age is {{i.age}}</p>
+            <p>{{$index + 1 }}. Name is {{i.name}} and age is {{i.age}}</p>
         </div>
 
     </div>
