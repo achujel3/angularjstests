@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>ngModel examples</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="ModelCtrl">
+        <h1>These are some og the ng-model examples: </h1>
+
+        <p>Some text: <input type="text" ng-model="someText" ng-change="textBoxChange()"></p>
+        <p>Some text value: {{someText}}</p>
+
+        <p>Boolean test: <input type="checkbox" ng-model="booleanValue"></p>
+        <p>Boolean value: {{booleanValue}}</p>
+
+        <p>Radio test:
+            <input type="radio" ng-model="radioValue" value="opt1">opt1</input>
+            <input type="radio" ng-model="radioValue" value="opt2">opt2</input>
+            <input type="radio" ng-model="radioValue" value="opt3">opt3</input>
+        </p>
+        <p>Radio test value: {{radioValue}}</p>
+
+        <p>Date test: <input type="date" ng-model="dateValue"></p>
+        <p>Date value: {{dateValue}}</p>
+    </div>
+</body>
+
+</html>

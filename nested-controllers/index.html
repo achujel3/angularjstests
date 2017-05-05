@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nestedControllers">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <h1>Testing some nested controllers: </h1>
+
+    <div ng-controller="NestCtrl1">
+        <p>{{propValue}}</p>
+    </div>
+
+    <div ng-controller="NestCtrl2">
+        <p>{{propValue}}</p>
+    </div>
+
+
+    <h1>Testing again nested controllers: </h1>
+
+    <div ng-controller="NestCtrl1">
+        <p>{{propValue}}</p>
+        <div ng-controller="NestCtrl2">
+            <p>{{propValue}}</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -13,6 +13,8 @@
 <body>
     <h1>Clock app</h1>
     <div ng-controller="TimeCtrl">
+        <p>Type your name: <input type="text" ng-model="userName"></p>
+        <p>Your name is: {{userName}}</p>
         <p>The time is: {{stringTime}}</p>
         <button type="submit" ng-click="refreshTime()">Refresh time</button>
     </div>
