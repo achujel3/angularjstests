@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clockApp">
+
+<head>
+    <title>Clock app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="../angular.js"></script>
+</head>
+
+<body>
+    <h1>Clock app</h1>
+    <div ng-controller="TimeCtrl">
+        <p>The time is: {{stringTime}}</p>
+    </div>
+
+    <script>
+        var app = angular.module("clockApp", []);
+        app.controller("TimeCtrl", TimeCtrl)
+
+        function TimeCtrl($scope) {
+            var currentDate = new Date();
+            $scope.stringTime = currentDate.toTimeString();
+        }
+    </script>
+</body>
+
+</html>

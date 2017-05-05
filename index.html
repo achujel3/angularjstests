@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myApp">
 
 <head>
     <title>AngularApp</title>
@@ -9,10 +9,21 @@
     </script>
 </head>
 
-<body ng-init="timeOfDay = 8">
-    <h1>This is an Angular.js app</h1>
-    <p ng-if="timeOfDay < 12">Good morning: <span ng-bind="timeOfDay"></span></p>
-    <p ng-if="timeOfDay > 17">Good evening: {{timeOfDay}}</p>
+<body>
+    <div ng-controller="MainCtrl">
+        <h1>This is an Angular.js app</h1>
+        <p ng-if="timeOfDay < 12">Good morning: <span ng-bind="timeOfDay"></span></p>
+        <p ng-if="timeOfDay > 17">Good evening: {{timeOfDay}}</p>
+    </div>
+    <script>
+        var module = angular.module("myApp", []);
+        module.controller("MainCtrl", Main);
+
+        function Main($scope) {
+            $scope.timeOfDay = 10;
+            console.log("This is the main method");
+        }
+    </script>
 </body>
 
 </html>
