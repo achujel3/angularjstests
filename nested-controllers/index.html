@@ -14,21 +14,21 @@
 
     <h1>Testing some nested controllers: </h1>
 
-    <div ng-controller="NestCtrl1">
-        <p>{{propValue}}</p>
+    <div ng-controller="NestCtrl1 as c1">
+        <p>{{c1.propValue}}</p>
     </div>
 
-    <div ng-controller="NestCtrl2">
-        <p>{{propValue}}</p>
+    <div ng-controller="NestCtrl2 as c2">
+        <p>{{c2.propValue}}</p>
     </div>
 
 
     <h1>Testing again nested controllers: </h1>
 
-    <div ng-controller="NestCtrl1">
-        <p>{{propValue}}</p>
-        <div ng-controller="NestCtrl2">
-            <p>{{propValue}}</p>
+    <div ng-controller="NestCtrl1 as c1">
+        <p>{{c1.propValue}}</p>
+        <div ng-controller="NestCtrl2 as c2">
+            <p>{{c2.propValue}}</p>
         </div>
     </div>
 
